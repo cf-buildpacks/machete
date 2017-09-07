@@ -9,11 +9,6 @@ Machete is the CF buildpack test framework.
 
 The tests require a running instance of Cloud Foundry. By default, it will try to find an instance at the local IP 10.244.0.34. You can specify an alternative Cloud Foundry instance with the `--host` argument.
 
-Usage :
-```bash
-bundle exec buildpack-build --host=myhost.mydomain
-```
-
 We run our tests with a local bosh-lite deployment. See [the github repo](https://github.com/cloudfoundry/bosh-lite) for more instructions.
 
 These tests assume an org named `pivotal` and a space named `integration` exist.
@@ -41,7 +36,7 @@ Buildpack Modes:
 * uncached: Buildpack dependencies will be fetched from the internet when staging an app.
 * cached : Buildpack dependencies will be downloaded and bundled with the buildpack before uploading it to Cloud Foundry.
 
-If you only want to run your tests with one mode, you can use the `bundle exec buildpack-build [ --cached | --uncached ]` script instead.
+If you only want to run your tests with one mode, you can use the `bundle exec buildpack-build [ cached | uncached ]` script instead.
 
 
 # Logging
